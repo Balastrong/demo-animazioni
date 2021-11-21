@@ -1,0 +1,42 @@
+<h1>Esempio 1</h1>
+<p>Passaggio tra due stati dinamico (click)</p>
+<button (click)="toggle()">Apri/Chiudi</button>
+
+<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
+  <p>Il menu è {{ isOpen ? 'Aperto' : 'Chiuso' }}!</p>
+</div>
+
+<h1>Esempio 2</h1>
+<p>Animazione automatica all'ingresso, con <kbd>* => default</kbd></p>
+
+<div class="welcome-text" [@welcomeBox]="'default'">Benvenuto!</div>
+
+<h1>Esempio 3</h1>
+<p>Animazione automatica all'ingresso, con <kbd>:enter</kbd>, ma senza stati</p>
+
+<div class="welcome-text" [@welcomeBoxStateless]>Benvenuto!</div>
+
+<h1>Esempio 4</h1>
+<p>Animazione senza stati con query (elementi multipli)</p>
+<button (click)="shake(true)">Scuoti!</button>
+<br /><br />
+<div
+  class="shake-container"
+  [@queryShake]="shakeState"
+  (@queryShake.done)="shake(false)"
+>
+  <div class="shake"></div>
+  <div class="shake"></div>
+  <div>X</div>
+  <!-- Questy div non ha la classe shake, non si muove! -->
+  <div class="shake"></div>
+</div>
+<p *ngIf="shakeState == 'shakeIt'">Animazione in corso!</p>
+
+<h1>Esempio 5</h1>
+<p>Animazione importata da file esterno</p>
+<button (click)="slide()">Scorri!</button>
+<br /><br />
+<div class="slide-container">
+  <div class="slide-box" [@slideAnimation]="slideState"></div>
+</div>
