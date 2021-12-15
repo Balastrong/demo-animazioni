@@ -1,3 +1,5 @@
+Demo e spiegazioni realizzati su commissione, per richiedere ulteriori informazioni o hai una richiesta in particolare, mi trovi su Fiverr: https://www.fiverr.com/balastrong
+
 # Animazioni Angular
 
 Angular offre una serie di metodi e strutture per implementare in maniera semplice animazioni per gli elementi del DOM, lasciando definire i comportamenti in maniera semplice senza dover implementare tutto a mano lato CSS.
